@@ -23,7 +23,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Outfit', 'Plus Jakarta Sans', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Plus Jakarta Sans', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -49,8 +49,8 @@ body {
   background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 20px 20px;
   color: var(--text-main);
-  line-height: 1.5;
-  font-size: 15px;
+  line-height: 1.55;
+  font-size: 16.5px;
   padding-bottom: 95px;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -105,7 +105,7 @@ body {
 }
 
 .brand-title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.2px;
@@ -114,7 +114,7 @@ body {
 }
 
 .brand-title .portal-text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 6px;
   color: #f4f4f5;
@@ -273,7 +273,12 @@ header:nth-of-type(1) > span:nth-of-type(1),
   box-shadow: var(--shadow-main);
 }
 
-/* Exam Dates Widget (#heroLatestCard) */
+/* Exam Dates Widget (#heroLatestCard) - Keep existing font & size untouched */
+div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-of-type(1),
+div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-of-type(1) *:not(i) {
+  font-family: 'Outfit', 'Plus Jakarta Sans', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+}
+
 div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-of-type(1) {
   background: linear-gradient(180deg, #fafaff 0%, #f5f5fa 100%);
   border: 1px solid rgba(24, 24, 27, 0.25);
@@ -282,6 +287,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   margin-bottom: 16px;
   box-shadow: 0 8px 22px -8px rgba(30, 27, 75, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
   overflow: hidden;
+  font-size: 15px;
 }
 
 .exam-widget-header {
@@ -892,7 +898,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-main);
-  font-size: 15px;
+  font-size: 16px;
   outline: none;
 }
 
@@ -928,7 +934,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   color: var(--text-muted);
   padding: 10px 18px;
   border-radius: 24px;
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
@@ -976,7 +982,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   color: var(--primary);
   padding: 12px 16px;
   border-radius: var(--radius-md);
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -1002,7 +1008,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
 }
 
 .badge-dept {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 14px;
@@ -1015,12 +1021,12 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
 }
 
 .date {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
 }
 
 .notice-title {
-  font-size: 16px;
+  font-size: 17.5px;
   font-weight: 600;
   color: var(--text-main);
   text-decoration: none;
@@ -1041,7 +1047,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
 }
 
 .category-tag {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
 }
 
@@ -1056,7 +1062,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   color: var(--text-main);
   padding: 8px 14px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(0,0,0,0.02);
@@ -1096,7 +1102,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   align-items: center;
   justify-content: center;
   gap: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   position: relative;
@@ -1160,7 +1166,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 17.5px;
   color: var(--primary);
 }
 
@@ -1183,12 +1189,12 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
 }
 
 .setting-info strong {
-  font-size: 15px;
+  font-size: 16.5px;
   display: block;
 }
 
 .setting-info p {
-  font-size: 13px;
+  font-size: 14.5px;
   color: var(--text-muted);
 }
 
@@ -1198,7 +1204,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   border: 1px solid var(--border-color);
   padding: 10px 14px;
   border-radius: var(--radius-md);
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 600;
   outline: none;
 }
@@ -1380,7 +1386,7 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   padding: 0 4px;
 }
 .section-header h3 {
-  font-size: 16px;
+  font-size: 17.5px;
   font-weight: 700;
   color: var(--text-main);
   display: flex;
@@ -1395,12 +1401,12 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
   padding: 0 4px;
 }
 .settings-header-main h2 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--text-main);
 }
 .settings-header-main p {
-  font-size: 14px;
+  font-size: 15.5px;
   color: var(--text-muted);
   margin-top: 4px;
 }
@@ -1525,9 +1531,9 @@ div:nth-of-type(2) > section#view-home:nth-of-type(1) > div#heroLatestCard:nth-o
 }
 
 .notice-desc-preview {
-  font-size: 13px;
+  font-size: 14.5px;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 12px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
