@@ -923,7 +923,7 @@ function renderResultsView() {
  */
 function createCardHTML(item, options = {}) {
   const isResult = item._isResult !== undefined ? item._isResult : isResultNotice(item);
-  const displayBadge = isResult ? "RESULT" : (item._deptCode || detectDeptCode(`${item.department || ''} ${item.title || ''}`));
+  const displayBadge = isResult ? "RESULT" : (item._deptCode || item.deptCode || detectDeptCode(`${item.department || ''} ${item.title || ''}`));
   const deptIcon = getDeptIcon(displayBadge);
 
   const rawLink = item.pdf || item.url || item.pdf_url || item.link || item.pdfUrl || "";
