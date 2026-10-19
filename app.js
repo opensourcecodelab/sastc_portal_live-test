@@ -26,9 +26,13 @@ import {
   formatDateString
 } from './utils.js';
 import { initCalculator } from './calculator.js';
-import { cseExamData } from './CSE-Exam.js';
-import { agExamData } from './AG-EXAM.js';
-import { bbaExamData } from './BBA-Exam.js';
+import * as cseExamMod from './CSE-Exam.js';
+import * as agExamMod from './AG-EXAM.js';
+import * as bbaExamMod from './BBA-Exam.js';
+
+const cseExamData = cseExamMod.cseExamData || cseExamMod.default || {};
+const agExamData = agExamMod.agExamData || agExamMod.default || {};
+const bbaExamData = bbaExamMod.bbaExamData || bbaExamMod.default || {};
 
 window.handleNoticeClick = handleNoticeClick;
 window.handlePdfView = handlePdfView;
@@ -1083,6 +1087,17 @@ function initEventListeners() {
     headerSyncBtn.addEventListener("click", () => {
       triggerHaptic();
       syncLiveNotices(true);
+    });
+  }
+
+  const devAboutToggleBtn = document.getElementById("devAboutToggleBtn");
+  const devAboutContent = document.getElementById("devAboutContent");
+  if (devAboutToggleBtn && devAboutContent) {
+    devAboutToggleBtn.addEventListener("click", () => {
+      triggerHaptic();
+      const isOpen = devAboutContent.classList.toggle("open");
+      devAboutToggleBtn.classList.toggle("open", isOpen);
+      devAboutToggleBtn.setAttribute("aria-expanded", String(isOpen));
     });
   }
 
