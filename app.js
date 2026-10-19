@@ -538,7 +538,23 @@ function renderExamDatesWidget() {
     }
   }
 
-  // Bind horizontal scroll button once
+  // Bind horizontal scroll button once with auto-hide behavior
+  const updateScrollBtnVisibility = () => {
+    if (!examScrollNextBtn || !examCardsList) return;
+    const maxScroll = examCardsList.scrollWidth - examCardsList.clientWidth;
+    if (maxScroll <= 6 || examCardsList.scrollLeft >= maxScroll - 8) {
+      examScrollNextBtn.classList.add("auto-hidden");
+      examScrollNextBtn.classList.remove("visible");
+    } else {
+      examScrollNextBtn.classList.remove("auto-hidden");
+      examScrollNextBtn.classList.add("visible");
+      clearTimeout(examScrollNextBtn._hideTimer);
+      examScrollNextBtn._hideTimer = setTimeout(() => {
+        examScrollNextBtn.classList.remove("visible");
+      }, 2200);
+    }
+  };
+
   if (examScrollNextBtn && !examScrollNextBtn.dataset.bound) {
     examScrollNextBtn.dataset.bound = "true";
     examScrollNextBtn.addEventListener("click", () => {
@@ -549,7 +565,11 @@ function renderExamDatesWidget() {
       } else {
         examCardsList.scrollBy({ left: 130, behavior: "smooth" });
       }
+      setTimeout(updateScrollBtnVisibility, 320);
     });
+
+    examCardsList.addEventListener("scroll", updateScrollBtnVisibility, { passive: true });
+    examCardsList.addEventListener("touchstart", updateScrollBtnVisibility, { passive: true });
   }
 
   // Update Level & Semester label
@@ -725,6 +745,8 @@ function renderExamDatesWidget() {
 
     examCardsList.innerHTML = cardsHtml;
   }
+
+  requestAnimationFrame(updateScrollBtnVisibility);
 
   // Save rendered Exam Dates div state in localStorage for offline access
   try {

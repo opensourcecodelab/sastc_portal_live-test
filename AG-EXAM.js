@@ -1,6 +1,17 @@
 export const agExamData = {
   "1": {
-   
+    "1": [
+      { code: "AG 101", date: "2026-10-18", time: "10:00 AM" },
+      { code: "AG 102", date: "2026-10-20", time: "10:00 AM" },
+      { code: "SSC 101", date: "2026-11-01", time: "10:00 AM" },
+      { code: "ENG 101", date: "2026-11-04", time: "10:00 AM" }
+    ],
+    "2": [
+      { code: "AG 151", date: "2026-10-26", time: "10:00 AM" },
+      { code: "AG 152", date: "2026-10-29", time: "10:00 AM" },
+      { code: "SSC 151", date: "2026-11-02", time: "10:00 AM" },
+      { code: "SOC 151", date: "2026-11-05", time: "10:00 AM" }
+    ]
   },
   "2": {
     "1": [
